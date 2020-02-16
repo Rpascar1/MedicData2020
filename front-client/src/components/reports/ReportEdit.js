@@ -4,10 +4,23 @@ import {fetchReport, editReport} from '../../actions'
 import ReportForm from './ReportForm'
 
 class ReportEdit extends React.Component {
+
+
+  componentDidMount() {
+    this.props.fetchReport(this.props.match.params.id)
+  }
+
+  onSubmit = (formValues) => {
+      console.log(formValues);
+      this.props.editReport(this.props.match.params.id, formValues)
+        console.log(formValues);
+    }
+
+
+
+
 }
 
-componentDidMount() {
-  this.props.fetchReport(this.props.match.params.id)
-}
+
 
 export default connect(mapStateToProps, {fetchReport, editReport})(ReportEdit)
