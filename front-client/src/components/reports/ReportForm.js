@@ -27,7 +27,7 @@ class ReportForm extends React.Component {
             onSubmit = (formValues) => {
               this.props.onSubmit(formValues)
             }
-            
+
             render() {
               return (
                 <form className="ui form error" onSubmit={this.props.handleSubmit(this.onSubmit)}>
@@ -38,3 +38,20 @@ class ReportForm extends React.Component {
               )
             }
           }
+          
+    const validate = (formValues)=>{
+      const errors={}
+
+      if(!formValues.title){
+      errors.title = "You must enter a title."
+      }
+      if(!formValues.description){
+      errors.description = "You must enter a description."
+      }
+      return errors
+    }
+
+    export default reduxForm({
+      form: 'reportForm',
+      validate
+    })(ReportForm)
