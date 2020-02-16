@@ -21,6 +21,10 @@ render(){
       )
   }
 }
-
+const mapStateToProps = (state, ownProps) => {
+  return {
+    report: state.reports[ownProps.match.params.id]
+  }
+}
 
 export default connect (mapStateToProps, {fetchReport})(ReportShow)
