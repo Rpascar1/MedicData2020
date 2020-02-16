@@ -60,7 +60,13 @@ class ReportList extends React.Component {
       }
     }
 
-  
+    const mapStateToProps = state => {
+    return { reports: Object.values(state.reports),
+             currentUserId: state.auth.userId,
+             isSignedIn: state.auth.isSignedIn
+           }
+    }
+
 
 
 export default connect (mapStateToProps, {fetchReports} )(ReportList)
