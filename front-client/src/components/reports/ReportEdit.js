@@ -6,4 +6,8 @@ import ReportForm from './ReportForm'
 class ReportEdit extends React.Component {
 }
 
+componentDidMount() {
+  this.props.fetchReport(this.props.match.params.id)
+}
+
 export default connect(mapStateToProps, {fetchReport, editReport})(ReportEdit)
