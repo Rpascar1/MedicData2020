@@ -1,9 +1,9 @@
 import React from 'react'
-
+import ReportList from './ReportList'
  const App = () =>{
   return(
-    <div>
-      SOME TEXT
+    <div className="ui container">
+      <ReportList/>
     </div>
   )
 }
