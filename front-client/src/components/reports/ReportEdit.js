@@ -16,11 +16,24 @@ class ReportEdit extends React.Component {
         console.log(formValues);
     }
 
+    render() {
+      console.log(this.props);
+        return (
+                <div>
+                  <h3> Edit a Report</h3>
+                  <ReportForm
+                    onSubmit={this.onSubmit}
+                    initialValues={this.props.report}
+                  />
+                </div>
+               )
+      }
+  }
 
-
-
+  const mapStateToProps = (state, ownProps) => {
+    return {
+      report: state.reports[ownProps.match.params.id]
+    }
+  }
 }
-
-
-
 export default connect(mapStateToProps, {fetchReport, editReport})(ReportEdit)
