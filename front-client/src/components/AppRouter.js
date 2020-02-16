@@ -8,7 +8,8 @@ import ReportCreate from './reports/ReportCreate'
 import ReportList from './reports/ReportList'
 import ReportShow from './reports/ReportShow'
 
-
+import Header from './Header'
+import Footer from './Footer'
 
 
 
