@@ -35,5 +35,5 @@ class ReportEdit extends React.Component {
       report: state.reports[ownProps.match.params.id]
     }
   }
-}
+
 export default connect(mapStateToProps, {fetchReport, editReport})(ReportEdit)
