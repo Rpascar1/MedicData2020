@@ -3,7 +3,7 @@ import ReportList from './ReportList'
  const App = () =>{
   return(
     <div className="ui container">
-      <ReportList/>
+      <AppRouter/>
     </div>
   )
 }
