@@ -28,7 +28,26 @@ class ReportDelete extends React.Component {
     )
   }
 
+  renderContent(){
+    if(!this.props.report) {
+      return 'Are you sure you want to delete this Report?'
+    }
+    return (
+      `Are you sure you want to delete this Report: ${this.props.report.title}?`
+    )
+    }
 
+  render() {
+    return(
+      <Modal
+      title="Delete Report"
+      content={this.renderContent()}
+      actions={this.renderActions()}
+      onDismiss={() => history.push("/reports")}
+      />
+   )
+  }
+}
 
 const mapStateToProps = (state, ownProps) => {
   return {
