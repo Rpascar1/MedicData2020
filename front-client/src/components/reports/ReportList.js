@@ -18,6 +18,22 @@ class ReportList extends React.Component {
         </div>
       )
   }
+}
+  renderList(){
+    return this.props.reports.map(report => {
+      return (
+        <div className="item" key={report.id}>
+          {this.renderAdmin(report)}
+          <i className="large middle aligned icon ambulance"/>
+          <div className="content">
+            <Link to={`/reports/${report.id}`} className="header">
+            {report.title}
+            </Link>
+            <div className="description">{report.description}</div>
+          </div>
+        </div>
+      )
+    })
   }
 
 
