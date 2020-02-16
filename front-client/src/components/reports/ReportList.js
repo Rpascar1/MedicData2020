@@ -1,11 +1,15 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import { fetchReports } from '../../actions'
+import { Link } from 'react-router-dom'
 
 class ReportList extends React.Component {
 
-render(){
-  return(<div>List</div>)
+  componentDidMount(){
+    this.props.fetchReports()
   }
 
-}
 
-export default ReportList
+  
+
+export default connect (mapStateToProps, {fetchReports} )(ReportList)
