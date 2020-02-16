@@ -16,14 +16,16 @@ const AppRouter = () => {
 return(
 <Router history={history}>
   <React.Fragment>
-  <Switch>
-    <Route path="/" exact><Redirect to="reports"/></Route>
-    <Route path="/reports" exact component={ReportList}/>
-    <Route path="/reports/new" exact component={ReportCreate}/>
-    <Route path="/reports/edit/:id" exact component={ReportEdit}/>
-    <Route path="/reports/delete/:id" exact component={ReportDelete}/>
-    <Route path="/reports/:id" exact component={ReportShow}/>
-  </Switch>
+    <Header />
+      <Switch>
+        <Route path="/" exact><Redirect to="reports"/></Route>
+        <Route path="/reports" exact component={ReportList}/>
+        <Route path="/reports/new" exact component={ReportCreate}/>
+        <Route path="/reports/edit/:id" exact component={ReportEdit}/>
+        <Route path="/reports/delete/:id" exact component={ReportDelete}/>
+        <Route path="/reports/:id" exact component={ReportShow}/>
+      </Switch>
+    <Footer />
   </React.Fragment>
 </Router>
 )
