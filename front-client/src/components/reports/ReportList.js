@@ -37,6 +37,30 @@ class ReportList extends React.Component {
   }
 
 
+    renderCreate () {
+      if(this.props.isSignedIn === true){
+        return (
+          <div style={{textAlign:'right'}}>
+            <Link to="/reports/new" className="ui button primary">Create Trip Report</Link>
+          </div>
+        )
+      }
+    }
+
+    render () {
+
+      return (
+        <div>
+          <h2>Trip Reports</h2>
+          <div className="ui celled list">{this.renderList()}</div>
+          <div>{this.renderCreate()}</div>
+        </div>
+
+      )
+      }
+    }
+
+  
 
 
 export default connect (mapStateToProps, {fetchReports} )(ReportList)
