@@ -24,3 +24,6 @@ class ReportForm extends React.Component {
                   </div>
                 )
             }
+            onSubmit = (formValues) => {
+              this.props.onSubmit(formValues)
+            }
