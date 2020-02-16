@@ -9,6 +9,7 @@ class ReportList extends React.Component {
     this.props.fetchReports()
   }
 
+
   renderAdmin(report){
     if(report.userId === this.props.currentUserId){
       return (
@@ -17,8 +18,9 @@ class ReportList extends React.Component {
           <Link className="ui button negative" to={`/reports/delete/${report.id}`}>DELETE</Link>
         </div>
       )
+    }
   }
-}
+
   renderList(){
     return this.props.reports.map(report => {
       return (
@@ -37,36 +39,35 @@ class ReportList extends React.Component {
   }
 
 
-    renderCreate () {
-      if(this.props.isSignedIn === true){
-        return (
-          <div style={{textAlign:'right'}}>
-            <Link to="/reports/new" className="ui button primary">Create Trip Report</Link>
-          </div>
-        )
-      }
-    }
 
-    render () {
-
+  renderCreate () {
+    if(this.props.isSignedIn === true){
       return (
-        <div>
-          <h2>Trip Reports</h2>
-          <div className="ui celled list">{this.renderList()}</div>
-          <div>{this.renderCreate()}</div>
+        <div style={{textAlign:'right'}}>
+          <Link to="/reports/new" className="ui button primary">Create Trip Report</Link>
         </div>
-
       )
-      }
     }
+  }
 
-    const mapStateToProps = state => {
-    return { reports: Object.values(state.reports),
-             currentUserId: state.auth.userId,
-             isSignedIn: state.auth.isSignedIn
-           }
-    }
+  render () {
 
+    return (
+      <div>
+        <h2>Trip Reports</h2>
+        <div className="ui celled list">{this.renderList()}</div>
+        <div>{this.renderCreate()}</div>
+      </div>
 
+    )
+  }
+}
+
+const mapStateToProps = state => {
+  return { reports: Object.values(state.reports),
+           currentUserId: state.auth.userId,
+           isSignedIn: state.auth.isSignedIn
+         }
+  }
 
 export default connect (mapStateToProps, {fetchReports} )(ReportList)
