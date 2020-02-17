@@ -1,10 +1,10 @@
 import React from 'react'
-
+import Year from './Year'
 
 const Footer = () => {
 
   return (
-    <div>MedicData™ {new Date().getFullYear()}</div>
+    <div>MedicData™ {Year}</div>
     )
 
 }
