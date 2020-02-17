@@ -31,7 +31,7 @@ const {userId} = getState().auth
 const report = {...formValues, userId}
 
 
-const response = await fetch(BASEURL+'/reports', {
+const response = await fetch(BASEURL +'/reports', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
