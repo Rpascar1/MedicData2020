@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import { fetchReports } from '../../actions'
 import { Link } from 'react-router-dom'
-
+import ADMIN_KEY from '../AdminKey'
 class ReportList extends React.Component {
 
   componentDidMount(){
@@ -11,7 +11,7 @@ class ReportList extends React.Component {
 
 
   renderAdmin(report){
-    if(report.userId === this.props.currentUserId){
+    if(report.userId === this.props.currentUserId || this.props.currentUserId === ADMIN_KEY){
       return (
         <div  className="right floated content">
           <Link className="ui button primary" to={`/reports/edit/${report.id}`}>EDIT</Link>
