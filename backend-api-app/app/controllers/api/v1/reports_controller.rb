@@ -30,7 +30,14 @@ class Api::V1::ReportsController < ApplicationController
   private
 
   def report_params
-    params.require(:report).permit(:title, :description, :userId, :admin)
+    params.require(:report).permit(
+       :userId, :admin,
+       :incidentLocation,:tripDate,
+       :dispatchTime, :onSceneTime,
+       :narrative, :arrivalDestTime,
+       :leftSceneTime,:arrivalDestTime,
+       :backInServiceTime,:startMiles, :endMiles,:totalMiles,:medicSig,
+       :tripDate )
   end
 
 

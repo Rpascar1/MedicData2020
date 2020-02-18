@@ -33,14 +33,14 @@ class ReportDelete extends React.Component {
       return 'Are you sure you want to delete this Report?'
     }
     return (
-      `Are you sure you want to delete this Report: ${this.props.report.title}?`
+      `Are you sure you want to delete this Report: ${this.props.report.incidentLocation}?`
     )
     }
 
   render() {
     return(
       <Modal
-      title="Delete Report"
+      incidentLocation="Delete Report"
       content={this.renderContent()}
       actions={this.renderActions()}
       onDismiss={() => history.push("/reports")}

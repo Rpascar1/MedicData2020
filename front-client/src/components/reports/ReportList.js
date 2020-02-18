@@ -29,9 +29,9 @@ class ReportList extends React.Component {
           <i className="large middle aligned icon ambulance"/>
           <div className="content">
             <Link to={`/reports/${report.id}`} className="header">
-            {report.title}
+            {report.incidentLocation}
             </Link>
-            <div className="description">{report.description}</div>
+            <div className="narrative">{report.date}</div>
           </div>
         </div>
       )

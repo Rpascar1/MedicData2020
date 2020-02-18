@@ -11,12 +11,12 @@ render(){
     if(!this.props.report) {
       return <div>Loading...</div>
     }
-      const {title, description} = this.props.report
+      const {incidentLocation, narrative} = this.props.report
 
     return (
       <div>
-        <h1>{title}</h1>
-        <h5>{description}</h5>
+        <h1>{incidentLocation}</h1>
+        <h5>{narrative}</h5>
       </div>
       )
   }

@@ -26,7 +26,9 @@ class ReportEdit extends React.Component {
                     initialValues={this.props.report}
                   />
                 </div>
+
                )
+
       }
   }
 

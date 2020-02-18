@@ -19,6 +19,18 @@ ActiveRecord::Schema.define(version: 2020_02_16_170056) do
     t.string "title"
     t.string "description"
     t.string "userId"
+    t.string "incidentLocation"
+    t.string "tripDate"
+    t.string "dispatchTime"
+    t.string "onSceneTime"
+    t.string "narrative"
+    t.string "arrivalDestTime"
+    t.string "leftSceneTime"
+    t.string "backInServiceTime"
+    t.string "startMiles"
+    t.string "endMiles"
+    t.string "totalMiles"
+    t.string "medicSig"
     t.boolean "admin", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
