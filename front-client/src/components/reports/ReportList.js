@@ -56,6 +56,7 @@ class ReportList extends React.Component {
 
     return (
       <div>
+      <br/>
         <h2>Trip Reports</h2>
         <div className="ui celled list">{this.renderList()}</div>
         <div>{this.renderCreate()}</div>

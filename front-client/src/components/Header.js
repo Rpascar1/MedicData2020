@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import GoogleAuth from './GoogleAuth'
 import TodaysDate from './TodaysDate'
-import solidBars from './solid_bars.png'
+import solidBars from './solid_bars1.png'
 import styles from "./mystyle.module.scss"
 const Header = () => {
 

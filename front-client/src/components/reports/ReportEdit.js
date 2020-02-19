@@ -20,6 +20,7 @@ class ReportEdit extends React.Component {
       console.log(this.props);
         return (
                 <div>
+                <br/>
                   <h3> Edit a Report</h3>
                   <ReportForm
                     onSubmit={this.onSubmit}

@@ -14,6 +14,7 @@ const ReportCreate =(props)=> {
 
     return (
             <div>
+            <br/>
               <h3> Create a Report</h3>
               <ReportForm onSubmit={onSubmit}/>
             </div>

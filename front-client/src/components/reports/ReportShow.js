@@ -16,9 +16,10 @@ render(){
       return <div>Loading...</div>
     }
       const props = this.props.report
-      
+
     return (
       <div>
+      <br/>
         <h1>{props.incidentLocation}</h1>
         <label>
         <h5> Your back in service time is : {`${new Date()}`} </h5>
