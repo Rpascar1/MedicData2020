@@ -38,9 +38,9 @@ class ReportForm extends React.Component {
           }
 
             onSubmit = (formValues) => {
-              debugger
+    
               this.props.onSubmit(formValues)
-              debugger
+
             }
 
             render() {

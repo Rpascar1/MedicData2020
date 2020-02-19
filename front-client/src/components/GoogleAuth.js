@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import {signIn, signOut} from '../actions'
 import  Google_Auth_Key  from './GoogleAuthKey'
-
+import styles from './mystyle.module.scss'
 
 
 
@@ -47,17 +47,36 @@ class GoogleAuth extends React.Component{
       return <div>Signing in</div>
     } else if (this.props.isSignedIn === true) {
       return (
-        <button className="ui red google button" onClick={this.onSignOutClick}>
-          <i className="google icon"/>
-          Sign Out
-        </button>
+
+      <div  onClick={this.onSignOutClick} >
+        <div className={styles.googleBtn}>
+          <div className={styles.googleiconwrapper}>
+
+            <img className={styles.googleicon} src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+
+            </div>
+            <a className={styles.btntext}><b>Sign Out</b></a>
+            </div>
+        </div>
+  
+
+
       )
     } else {
       return (
-        <button className="ui red google button" onClick={this.onSignInClick}>
-          <i className="google icon"/>
-          Sign In With Google
-        </button>
+        <div  onClick={this.onSignInClick} >
+        <div className={styles.googleBtn}>
+          <div className={styles.googleiconwrapper}>
+            <i>
+            <img className={styles.googleicon} src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+            </i>
+          </div>
+            <a className={styles.btntext}><b>Sign in with Google</b></a>
+            </div>
+
+        </div>
+
+
       )
     }
   }

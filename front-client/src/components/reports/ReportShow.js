@@ -16,9 +16,8 @@ render(){
       return <div>Loading...</div>
     }
       const props = this.props.report
-      debugger
+      
     return (
-
       <div>
         <h1>{props.incidentLocation}</h1>
         <label>
