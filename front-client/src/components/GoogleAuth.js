@@ -55,10 +55,10 @@ class GoogleAuth extends React.Component{
             <img className={styles.googleicon} src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
 
             </div>
-            <a className={styles.btntext}><b>Sign Out</b></a>
+            <a className={styles.btntextSO}><b>Sign Out</b></a>
             </div>
         </div>
-  
+
 
 
       )
@@ -71,7 +71,7 @@ class GoogleAuth extends React.Component{
             <img className={styles.googleicon} src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
             </i>
           </div>
-            <a className={styles.btntext}><b>Sign in with Google</b></a>
+            <a className={styles.btntextSI}><b>Sign in</b></a>
             </div>
 
         </div>
