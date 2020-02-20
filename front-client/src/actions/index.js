@@ -45,7 +45,10 @@ const response = await fetch(BASEURL +'/reports', {
 
   const reportJSON = await response.json()
 
-    dispatch({type: CREATE_REPORT, payload: reportJSON})
+    dispatch({
+      type: CREATE_REPORT,
+      payload: reportJSON
+    })
     history.push('/reports')
 
 }
@@ -62,7 +65,10 @@ const response = await fetch(BASEURL+'/reports', {
   })
   const reportsJSON = await response.json()
 
-    dispatch({type: FETCH_REPORTS, payload: reportsJSON})
+    dispatch({
+      type: FETCH_REPORTS,
+      payload: reportsJSON
+    })
     history.push('/reports')
 }
 
@@ -78,7 +84,10 @@ const response = await fetch(BASEURL+`/reports/${id}`, {
   })
   const reportJSON = await response.json()
 
-    dispatch({type: FETCH_REPORT, payload: reportJSON})
+    dispatch({
+      type: FETCH_REPORT,
+      payload: reportJSON
+    })
 }
 
 export const editReport = (id, formValues) => async (dispatch,
@@ -102,7 +111,11 @@ const response = await fetch(BASEURL+`/reports/${id}`, {
 
   const reportJSON = await response.json()
 
-    dispatch({type: EDIT_REPORT, payload: reportJSON})
+    dispatch({
+      type: EDIT_REPORT,
+      payload: reportJSON
+    })
+
     history.push('/reports')
 
 }
@@ -118,6 +131,9 @@ await fetch(BASEURL+`/reports/${id}`, {
     },
 
   })
-    dispatch({type: DELETE_REPORT, payload: id})
+    dispatch({
+      type: DELETE_REPORT,
+      payload: id
+    })
     history.push('/reports')
 }

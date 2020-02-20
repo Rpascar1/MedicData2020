@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import ADMIN_KEY from '../AdminKey'
 
 
-class ReportList extends React.Component {
+class ReportListContainer extends React.Component {
 
   componentDidMount(){
     this.props.fetchReports()
@@ -73,4 +73,4 @@ const mapStateToProps = state => {
          }
   }
 
-export default connect (mapStateToProps, {fetchReports} )(ReportList)
+export default connect (mapStateToProps, {fetchReports} )(ReportListContainer)

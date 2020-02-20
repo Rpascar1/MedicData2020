@@ -5,7 +5,7 @@ import history from '../history'
 import ReportEdit from './reports/ReportEdit'
 import ReportDelete from './reports/ReportDelete'
 import ReportCreate from './reports/ReportCreate'
-import ReportList from './reports/ReportList'
+import ReportListContainer from './reports/ReportListContainer'
 import ReportShow from './reports/ReportShow'
 
 import Header from './Header'
@@ -20,11 +20,12 @@ return(
     <Header />
       <Switch>
         <Route path="/" exact><Redirect to="reports"/></Route>
-        <Route path="/reports" exact component={ReportList}/>
+        <Route path="/reports" exact component={ReportListContainer}/>
         <Route path="/reports/new" exact component={ReportCreate}/>
         <Route path="/reports/edit/:id" exact component={ReportEdit}/>
         <Route path="/reports/delete/:id" exact component={ReportDelete}/>
         <Route path="/reports/:id" exact component={ReportShow}/>
+        <Route component={ReportListContainer}/>
       </Switch>
     <Footer />
   </React.Fragment>
