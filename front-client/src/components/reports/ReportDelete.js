@@ -13,9 +13,6 @@ class ReportDelete extends React.Component {
 
 
   renderActions(){
-
-
-
     return (
       <React.Fragment>
         <button
