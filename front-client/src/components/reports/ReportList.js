@@ -5,23 +5,22 @@ import { Link } from 'react-router-dom'
 import ADMIN_KEY from '../AdminKey'
 
 
+
 class ReportList extends React.Component {
+
+
 
   componentDidMount(){
     this.props.fetchReports()
   }
 
-  sort = () => {
-    this.props.reports.sort(function (a, b) {
-        return b.id - a.id
-    })
-  }
+
 
   renderAdmin(report){
     if(report.userId === this.props.currentUserId || this.props.currentUserId === ADMIN_KEY){
       return (
         <div  className="right floated content">
-        
+
           <Link className="ui button primary" to={`/reports/edit/${report.id}`}>EDIT</Link>
           <Link className="ui button negative" to={`/reports/delete/${report.id}`}>DELETE</Link>
         </div>
