@@ -27,30 +27,13 @@ Use the create trip report, edit or delete buttons to test functionality.
 
 ![Imgur](https://imgur.com/yG2LytJ.png)
 
-
-run this command in the command line if error says you need or do not have permission to execute:
-
-chmod a+x ./bin/coral_getter
-
-This will make the file executable.
-
-Use this app to see in stock sps coral as well as anything under $100
-
-
-
-
-
 ## License
 https://opensource.org/licenses/MIT
 
 ## Development
 
-
-
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+After checking out the repo, run bundle and npm install to install dependencies.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/Rpascar1/coral_getter.
+Bug reports and pull requests are welcome on GitHub at https://github.com/Rpascar1/medicdata2020.
