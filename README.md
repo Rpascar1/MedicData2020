@@ -22,6 +22,8 @@ In the Adminkey.js file create a const of ADMIN_KEY and asign the specific Googl
 ## Usage
 
 Use the create trip report, edit or delete buttons to test functionality. 
+![Imgur](https://imgur.com/C8VahOQ.png)
+![Imgur](https://imgur.com/W22UwbI.png)
 
 ![Imgur](https://imgur.com/yG2LytJ.png)
 
@@ -34,8 +36,8 @@ This will make the file executable.
 
 Use this app to see in stock sps coral as well as anything under $100
 
-![Imgur](https://imgur.com/C8VahOQ.png)
-![Imgur](https://i.imgur.com/OzOD5pM.png)
+
+
 
 
 ## License
